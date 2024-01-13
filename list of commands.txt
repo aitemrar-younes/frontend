@@ -1,0 +1,7 @@
+npm create vite@latest app_name # in our case app_name is "frontend"
+npm install # to install the dependencies
+npm install -D sass
+npm install  @tabler/icons-react # https://tabler.io/docs/icons/react
+# no more use tabler
+npm install react-icons --save
+https://react-icons.github.io/react-icons/search/
