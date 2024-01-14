@@ -5,3 +5,7 @@ npm install  @tabler/icons-react # https://tabler.io/docs/icons/react
 # no more use tabler
 npm install react-icons --save
 https://react-icons.github.io/react-icons/search/
+npm i react-hook-form
+npm i yup
+npm i @hookform/resolvers
+npm i "react-router-dom"
