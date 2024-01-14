@@ -1,10 +1,12 @@
 import RootFrame from "./components/layout/RootFrame"
+import Login from "./pages/login/Login"
 
 function App() {
 
   return (
     <>
-      <RootFrame>
+      <Login />
+      {/* <RootFrame>
         <h1>Template</h1>
         <hr />
         <br />
@@ -43,7 +45,7 @@ function App() {
         <p><strong>Modals</strong> display modals</p>
         <br />
 
-      </RootFrame>
+      </RootFrame> */}
     </>
   )
 }
