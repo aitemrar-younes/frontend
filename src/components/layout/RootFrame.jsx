@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import '/src/assets/Styles/RootFrame.scss'
 
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -17,6 +17,23 @@ const RootFrame = ({children}) => {
     useEffect(() => {
         localStorage.setItem('isCollapsed', JSON.stringify(isCollapsed));
     }, [isCollapsed]);
+
+    
+    const dropdownRef = useRef(null);
+
+    const handleClickOutside = (event) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+          setDropDownVisible(false);
+        }
+      };
+    
+      useEffect(() => {
+        document.addEventListener('click', handleClickOutside);
+    
+        return () => {
+          document.removeEventListener('click', handleClickOutside);
+        };
+      }, []);
 
   return (
     <div className={isCollapsed?'__RootFrame__ collapsed':'__RootFrame__'}>
@@ -77,16 +94,16 @@ const RootFrame = ({children}) => {
                 <div className="col">
                     <button className='notification_button'>
                         <IoNotifications size={20} color='#303c54' />
-                        <span>15</span>
+                        <span>9</span>
                     </button>
                     <div className="profile_wrraper">
-                        <div className="name" onClick={()=>setDropDownVisible((prev)=>!prev)}>Profile name</div>
-                        <div className="image_container" onClick={()=>setDropDownVisible((prev)=>!prev)}>
+                        <div className="name">Profile name</div>
+                        <div className="image_container" onClick={()=>setDropDownVisible((prev)=>!prev)} ref={dropdownRef}>
                             <img src="/src/assets/profile/Abdelmadjid-Tebbourne-Africa-Intelligence.jpg" alt="" />
                         </div>
                         <div className={dropDownVisible?"dropdown_container visible":"dropdown_container"}>
                             <ul className="profile_link_list">
-                                <li className="profile_link_item">
+                                <li className="profile_link_item" onClick={()=>alert('profile')}>
                                     <FaUser size={18} className='profile_icon' />
                                     Profile
                                 </li>
