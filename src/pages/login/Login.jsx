@@ -3,6 +3,7 @@ import '/src/assets/Styles/Login.scss'
 import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { useNavigate } from 'react-router-dom';
 
 const validationSchema = yup.object({
     username:yup.string().required('username est obligatoire').min(3),
@@ -17,6 +18,7 @@ const Custom_Input = ({label, register, errors, type='text', placeholder=''}) =>
     )
 }
 const Login = () => {
+    const navigate = useNavigate();
     const {register, handleSubmit, formState:{errors}} = useForm({
         resolver: yupResolver(validationSchema),
         defaultValues: {
@@ -26,6 +28,7 @@ const Login = () => {
     })
     const onSubmit = data =>{
         console.log(data)
+        navigate('/');
     }
   return (
     <div className='__Login__'>
@@ -37,7 +40,7 @@ const Login = () => {
                 <form onSubmit={handleSubmit(onSubmit)} autoComplete='off'>
                     <Custom_Input label='username' placeholder='username' register={register} errors={errors} />
                     <Custom_Input label='password' placeholder='password' register={register} errors={errors} type='password'/>
-                    <button type="submit">Se connecter</button>
+                    <button className='btn' type="submit">Se connecter</button>
                 </form>
             </div>
             <div className="card_footer">

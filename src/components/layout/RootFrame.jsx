@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import '/src/assets/Styles/RootFrame.scss'
+import { Link } from 'react-router-dom';
 
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoNotifications } from "react-icons/io5";
@@ -111,10 +112,10 @@ const RootFrame = ({children}) => {
                                     <IoSettingsSharp size={18} className='profile_icon' />
                                     Settings
                                 </li>
-                                <li className="profile_link_item">
+                                <Link to={"/login"} className="profile_link_item">
                                     <TbLogout size={18} className='profile_icon' />
                                     Deconnecter
-                                </li>
+                                </Link>
                             </ul>
                         </div>
                     </div>

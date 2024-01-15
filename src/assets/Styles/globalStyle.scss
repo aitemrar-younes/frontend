@@ -51,7 +51,7 @@ input{
         }
     }
 }
-button{
+button.btn{
     padding: 8px 12px;
     border-radius: 5px;
     margin-bottom: 5px;
@@ -63,6 +63,11 @@ button{
     color: #fff;
     background-color: #444;
     font-weight: 500;
+    &:focus{
+        border-color: transparent;
+        outline: 1px solid #118adb;
+        box-shadow: 0 0 5px 0.2rem rgba(0, 123, 255, 0.35);
+    }
 }
 
 /* Scrollbar styles */
