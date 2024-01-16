@@ -1,0 +1,102 @@
+.__Table__{
+    display: flex;
+    flex-direction: column;
+    background-color: #ddd;
+    height: 100vh;
+    .table_wrapper{
+        width: 90%;
+        background-color: #fff;
+        margin: auto;
+        border-radius: 5px;
+        overflow: hidden;
+        /* padding: 0 15px; */
+        .controller{
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            .row{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                &:first-child{
+                    margin-bottom: 15px;
+                }
+                .col{
+                    display: flex;
+                    flex-direction: row;
+                    color: #444;
+                }
+                .titre{
+                    //line-height: 3;
+                    font-weight: 500;
+                }
+                .search{
+                    padding: 5px 10px;
+                }
+                .filter_button{
+                    margin-left: 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                    padding: 0;
+                }
+            }
+        }
+        table{
+            width: 100%;
+            font-size: 14px;
+            font-weight: 400;
+            text-align: left;
+            border-spacing: 0;
+            border-collapse: collapse;
+            thead{
+                tr{
+                    line-height: 3;
+                    border-bottom: 1px solid #ddd;
+                    th{
+                        font-weight: 500;
+                        &:first-child{
+                            padding-left: 15px;
+                        }
+                        &:last-child{
+                            padding-left: 15px;
+                        }
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    line-height: 2.5;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: rgba(206, 206, 206, 0.5) !important;
+                    }
+                    
+                    &:nth-child(even){
+                        background-color: rgba(206, 206, 206, 0.384);
+                    }
+                    td{
+                        &:first-child{
+                            padding-left: 15px;
+                        }
+                        &:last-child{
+                            padding-left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        .table_related_info{
+            border-top: 1px solid #ddd;
+            padding: 0 15px;
+            .filtred_data{
+                font-size: 13px;
+                font-weight: 500;
+                line-height: 4;
+            }
+        }
+    }
+}

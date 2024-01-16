@@ -52,6 +52,10 @@ const RootFrame = ({children}) => {
                     <li className="link-item link">dashbord</li>
                     <li className="link-item link">statistics</li>
                     <li className="link-item link">next move</li>
+                    <li className="link-item caption">Components</li>
+                    <Link to='/components/table' className="link-item link">Table</Link>
+                    <li className="link-item link">modal</li>
+                    <li className="link-item link">form</li>
                     <li className="link-item caption">home</li>
                     <li className="link-item link">baraque</li>
                     <li className="link-item link">coffrage</li>
