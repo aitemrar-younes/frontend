@@ -1,0 +1,36 @@
+.__Modal__{
+    .modal_open_button{
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid #bbb;
+        background-color: #fff;
+        color: #444;
+        cursor: pointer;
+    }
+    .modal_overlay{
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(68, 68, 68, 0.158);
+        z-index: 3;
+        overflow: hidden;
+        .modal{
+            background-color: #fff;
+            position: absolute;
+            width: 450px;
+            right: -450px;
+            height: 100vh;
+            transition: all 0.2s ease-in-out;
+            box-shadow: -5px 0px 8px 3px rgba(0,0,0,0.1);
+        }
+        &.open{
+            visibility: visible;
+            .modal{
+                transform: translateX(-100%);
+            }
+        }
+    }
+}
