@@ -1,60 +1,70 @@
 .__Table__{
-    .table_wrapper{
-        width: 100%;
-        overflow-x: auto;
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0 -1px 8px 3px rgba(0,0,0,0.1);
-        .controller{
-            padding: 15px;
-            border-bottom: 1px solid #eee;
-            .row{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 -1px 8px 3px rgba(0,0,0,0.1);
+    .controller{
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+        .row{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            &:first-child{
+                /* margin-bottom: 15px; */
+            }
+            .col{
                 display: flex;
                 flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                &:first-child{
-                    /* margin-bottom: 15px; */
-                }
-                .col{
+                column-gap: 10px;
+                color: #444;
+                .input-group{
                     display: flex;
                     flex-direction: row;
-                    column-gap: 10px;
-                    color: #444;
-                    .input-group{
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        label{
-                            font-size: 14px;
-                            margin-right: 10px;
-                            color: #555;
-                        }
-                        .search{
-                            padding: 5px 10px;
-                        }
-                    }
-                    
-                    .filter_button{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        column-gap: 10px;
-                        background-color: transparent;
-                        border: 1px solid #bbb;
-                        border-radius: 5px;
-                        padding: 0 10px;
-                        cursor: pointer;
+                    align-items: center;
+                    label{
+                        font-size: 14px;
+                        margin-right: 10px;
                         color: #555;
+                        /* @media (max-width: 900px) {
+                            display: none;
+                        } */
+                    }
+                    .search{
+                        padding: 5px 10px;
+                        min-width: 110px;
                     }
                 }
-                .titre{
-                    //line-height: 3;
-                    font-weight: 500;
+                
+                .filter_button{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    column-gap: 10px;
+                    background-color: transparent;
+                    border: 1px solid #bbb;
+                    border-radius: 5px;
+                    padding: 0 10px;
+                    cursor: pointer;
                     color: #555;
                 }
             }
+            .titre{
+                //line-height: 3;
+                font-weight: 500;
+                color: #555;
+                @media (max-width: 900px) {
+                    font-size: 18px;
+                }
+            }
         }
+    }
+    .table_wrapper{
+        width: 100%;
+        overflow-x: auto;
+        
         table{
             width: 100%;
             min-width: 760px;
@@ -66,6 +76,7 @@
             border-collapse: collapse;
             thead{
                 tr{
+                    background-color: rgba(187, 187, 187, 0.178);
                     line-height: 3;
                     border-bottom: 1px solid #ddd;
                     th{
@@ -85,11 +96,13 @@
                     line-height: 2.5;
                     cursor: pointer;
                     &:hover{
-                        background-color: rgba(206, 206, 206, 0.5) !important;
+                        //background-color: rgba(206, 206, 206, 0.5) !important;
+                        background-color: #e3e9ff !important;
                     }
+                    border-bottom: 1px solid #ddd;
                     
                     &:nth-child(even){
-                        background-color: rgba(206, 206, 206, 0.384);
+                        background-color: rgba(206, 206, 206, 0.08);
                     }
                     td{
                         &:first-child{
@@ -103,7 +116,7 @@
             }
         }
         .table_related_info{
-            border-top: 1px solid #ddd;
+            //border-top: 1px solid #ddd;
             padding: 0 15px;
             .filtred_data{
                 font-size: 13px;

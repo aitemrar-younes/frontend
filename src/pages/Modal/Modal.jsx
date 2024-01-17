@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import '/src/assets/Styles/Modal.scss'
 import RootFrame from '../../components/layout/RootFrame'
+import { LiaSkullCrossbonesSolid } from "react-icons/lia";
 const Modal = () => {
     const [open, setOpen] = useState(false)
   return (
@@ -9,7 +10,10 @@ const Modal = () => {
             <button className='modal_open_button' onClick={()=>setOpen(true)}>Open modal</button>
             <div className={`modal_overlay ${open ? "open" : ""}`}>
                 <div className="modal">
-            <button className='modal_open_button' onClick={()=>setOpen(false)}>Open modal</button>
+                    <button className='close_button' onClick={()=>setOpen(false)}><LiaSkullCrossbonesSolid size={28} /></button>
+                    <div className="modal_header">
+                        <h3>Modal for ...</h3>
+                    </div>
                 </div>
             </div>
         </div>

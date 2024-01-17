@@ -19,7 +19,6 @@ const Table = () => {
   return (
     <RootFrame>
     <div className='__Table__'>
-        <div className="table_wrapper">
             <div className="controller">
                 <div className="row">
 
@@ -30,7 +29,7 @@ const Table = () => {
                     <div className="col">
                         <div className="input-group">
                             <label htmlFor="input_search">Cherecher</label>
-                            <input id='input_search' type="text" className="search" />
+                            <input id='input_search' type="text" className="search" placeholder='...' />
                         </div>
                         <button className="filter_button">Filtrer<TbFilterSearch  size={20} color='#777' /></button>
                     </div>
@@ -46,6 +45,7 @@ const Table = () => {
                     </div>
                 </div>
             </div>
+        <div className="table_wrapper">
             <table className="table">
                 <thead>
                     <tr>

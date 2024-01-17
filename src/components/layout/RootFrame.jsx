@@ -56,7 +56,7 @@ const RootFrame = ({children}) => {
                     <li className="link-item caption">Components</li>
                     <Link to='/components/table' className="link-item link">Table</Link>
                     <Link to='/components/modal' className="link-item link">modal</Link>
-                    <li className="link-item link">form</li>
+                    <Link to='/components/form' className="link-item link">form</Link>
                     <li className="link-item caption">home</li>
                     <li className="link-item link">baraque</li>
                     <li className="link-item link">coffrage</li>

@@ -9,3 +9,4 @@ npm i react-hook-form
 npm i yup
 npm i @hookform/resolvers
 npm i "react-router-dom"
+npm install react-date-picker
