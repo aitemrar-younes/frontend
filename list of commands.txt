@@ -10,3 +10,5 @@ npm i yup
 npm i @hookform/resolvers
 npm i "react-router-dom"
 npm install react-date-picker
+# good to know and take a look in this web
+https://reactdatepicker.com/
