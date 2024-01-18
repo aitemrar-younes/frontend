@@ -29,7 +29,7 @@ const Table = () => {
                     <div className="col">
                         <div className="input-group">
                             <label htmlFor="input_search">Cherecher</label>
-                            <input id='input_search' type="text" className="search" placeholder='...' />
+                            <input id='input_search' type="text" className="input search" placeholder='...' />
                         </div>
                         <button className="filter_button">Filtrer<TbFilterSearch  size={20} color='#777' /></button>
                     </div>
