@@ -1,10 +1,9 @@
 import React from 'react'
 import './Home.scss'
-import RootFrame from '../../components/layout/RootFrame'
 
 const Home = () => {
   return (
-      <RootFrame>
+      <>
         <h1>Template</h1>
         <hr />
         <br />
@@ -43,7 +42,7 @@ const Home = () => {
         <p><strong>Modals</strong> display modals</p>
         <br />
 
-      </RootFrame>
+      </>
   )
 }
 

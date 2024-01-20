@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import '/src/assets/Styles/RootFrame.scss'
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoNotifications } from "react-icons/io5";
@@ -130,7 +130,8 @@ const RootFrame = ({children}) => {
                 </div>
             </div>
             <div className="content">
-                {children}
+                {/* {children} */}
+                <Outlet />
             </div>
         </div>
     </div>

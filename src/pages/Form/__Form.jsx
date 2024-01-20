@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import RootFrame from '../../components/layout/RootFrame'
+import React, { useState } from 'react'
 import '/src/assets/Styles/Custom_form.scss'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Select from 'react-select'
 const Custom_Form = () => {
+  console.log('success')
   const [startDate, setStartDate] = useState(new Date());
   const options = [
     { value: 'chocolate', label: 'Chocolate' },
@@ -13,35 +13,33 @@ const Custom_Form = () => {
   ]
 
   return (
-    <RootFrame>
-      <div className="__Form__">
-        Forms ...
+    <div className="__Form__">
+      Forms ...
+      <br />
+      <form action="">
+        <div className="input-group">
+          {/* <label htmlFor="">Label</label> */}
+          <input className='input' type="text" />
+        </div>
+        <div className="input-group">
+          {/* <label htmlFor="">Date</label> */}
+          {/* <input type="date" /> */}
+          <DatePicker
+            className="input"
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
+            dateFormat="dd/MM/yyyy"
+          />
+        </div>
+        <div className="input-group">
+          <Select options={options} />
+        </div>
         <br />
-        <form action="">
-          <div className="input-group">
-            {/* <label htmlFor="">Label</label> */}
-            <input className='input' type="text" />
-          </div>
-          <div className="input-group">
-            {/* <label htmlFor="">Date</label> */}
-            {/* <input type="date" /> */}
-            <DatePicker
-              className="input"
-              selected={startDate}
-              onChange={(date) => setStartDate(date)}
-              dateFormat="dd/MM/yyyy"
-            />
-          </div>
-          <div className="input-group">
-            <Select options={options} />
-          </div>
-          <br />
-          <button className="btn" type="submit">
-            Validate
-          </button>
-        </form>
-      </div>
-    </RootFrame>
+        <button className="btn" type="submit">
+          Validate
+        </button>
+      </form>
+    </div>
   );
 }
 

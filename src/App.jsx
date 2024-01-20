@@ -1,3 +1,4 @@
+import RootFrame from "./components/layout/RootFrame";
 import Custom_Form from "./pages/Form/__Form";
 import Home from "./pages/Home/Home"
 import Modal from "./pages/Modal/Modal";
@@ -9,11 +10,13 @@ function App() {
 
   return (
     <Routes>
-        <Route path="/" element={<Home/>}  />
         <Route path="/login" element={<Login/>}  />
-        <Route path="/components/table" element={<Table/>}  />
-        <Route path="/components/modal" element={<Modal/>}  />
-        <Route path="/components/form" element={<Custom_Form />}  />
+        <Route path="/" element={<RootFrame/>}>
+          <Route path="" element={<Home/>}  />
+          <Route path="components/table" element={<Table/>}  />
+          <Route path="components/modal" element={<Modal/>}  />
+          <Route path="components/form" element={<Custom_Form />}  />
+        </Route>
     </Routes>
   )
 }
