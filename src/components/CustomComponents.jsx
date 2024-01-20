@@ -13,12 +13,13 @@ export const Custom_Input = ({label, register, errors = null, type='text', place
     )
 }
 
-export const Custom_DatePicker = ({errors = null, placeholder='', name, control}) =>{
+export const Custom_DatePicker = ({errors = null, placeholder='', name, control, defaultValue = null}) =>{
     return (
         <div className="input-group">
             <Controller
                 control={control}
                 name={name}
+                defaultValue={defaultValue}
                 render={({ field }) => (
                     <DatePicker
                         placeholderText={placeholder}
@@ -28,7 +29,7 @@ export const Custom_DatePicker = ({errors = null, placeholder='', name, control}
                     />
                 )}
             />
-            {errors && errors["date-input"] && <span className="text-danger">{errors["date-input"].message}</span>}
+            {errors && errors[name] && <span className="text-danger">{errors[name].message}</span>}
         </div>
     )
 }

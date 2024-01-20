@@ -3,18 +3,6 @@ import { TbFilterSearch  } from "react-icons/tb";
 import '/src/assets/Styles/Table.scss'
 
 const Table = () => {
-     const data = [
-        { id: 1, Nom: 'Smith', Prenom: 'John', Age: 30, Tel: '123-456-7890', state:"actif" },
-        { id: 2, Nom: 'Johnson', Prenom: 'Anna', Age: 25, Tel: '987-654-3210', state:"actif" },
-        { id: 3, Nom: 'Doe', Prenom: 'Alice', Age: 28, Tel: '555-123-4567', state:"actif" },
-        { id: 4, Nom: 'Williams', Prenom: 'David', Age: 35, Tel: '456-789-0123', state:"actif" },
-        { id: 5, Nom: 'Brown', Prenom: 'Emily', Age: 22, Tel: '789-012-3456', state:"actif" },
-        { id: 6, Nom: 'Jones', Prenom: 'Michael', Age: 32, Tel: '321-654-0987', state:"actif" },
-        { id: 7, Nom: 'Garcia', Prenom: 'Sophia', Age: 27, Tel: '012-345-6789', state:"actif" },
-        { id: 8, Nom: 'Martinez', Prenom: 'Daniel', Age: 40, Tel: '654-321-9870', state:"actif" },
-        { id: 9, Nom: 'Anderson', Prenom: 'Olivia', Age: 29, Tel: '789-456-1230', state:"actif" },
-        { id: 10, Nom: 'Taylor', Prenom: 'Ethan', Age: 26, Tel: '234-567-8901', state:"actif" },
-     ]
   return (
     <div className='__Table__'>
             <div className="controller">
@@ -25,7 +13,7 @@ const Table = () => {
                     </div>
 
                     <div className="col">
-                        <div className="input-group">
+                        <div className="input-group-inline">
                             <label htmlFor="input_search">Cherecher</label>
                             <input id='input_search' type="text" className="input search" placeholder='...' />
                         </div>

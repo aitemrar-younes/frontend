@@ -22,8 +22,8 @@ const Login = () => {
         defaultValues: {
             username:'',
             password:'',
-            'date-input':'',
-            'select-input':""
+            'date-input':null,
+            'select-input': null
         }
     })
 
