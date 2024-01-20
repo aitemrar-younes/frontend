@@ -16,3 +16,4 @@ npm install react-datepicker --save
 import "react-datepicker/dist/react-datepicker.css";
 and restart server
 npm i --save react-select
+npm i @tanstack/react-query
